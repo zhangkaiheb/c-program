@@ -7,7 +7,7 @@ RM = rm -f
 
 INCLUDES = -I./ -Iinclude
 #LIBINCLUDES = -L.
-CFLAGS += -O2 $(INCLUDES)
+CFLAGS += -O2 -Werror -Wall $(INCLUDES)
 LINKFLAGS =
 
 C_SOURCES = $(wildcard *.c)
@@ -24,10 +24,10 @@ TARGET_2 = udps
 all:$(TARGET_1) $(TARGET_2)
 
 $(TARGET_1):$(OBJS_1)
-	$(CC) $(LINKFLAGS) -o $(TARGET_1) $^ $(LIBS)
+	$(CC) $(CFLAGS) $(LINKFLAGS) -o $(TARGET_1) $^ $(LIBS)
 
 $(TARGET_2):$(OBJS_2)
-	$(CC) $(LINKFLAGS) -o $(TARGET_2) $^ $(LIBS)
+	$(CC) $(CFLAGS) $(LINKFLAGS) -o $(TARGET_2) $^ $(LIBS)
 
 
 %.o:%.c
