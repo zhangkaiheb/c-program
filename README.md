@@ -7,6 +7,8 @@ udpsock/    udp c/s socket
 
 tcpsock/    tcp c/s socket
 
+rawsock/    raw and udp socket
+
 unixsock/    unix dgram/stream socket
 
 crypto/    aes128 de/encrypt
