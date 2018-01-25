@@ -9,6 +9,8 @@ tcpsock/    tcp c/s socket
 
 rawsock/    raw and udp socket
 
+rtnetlink/    route netlink receiver
+
 unixsock/    unix dgram/stream socket
 
 crypto/    aes128 de/encrypt
